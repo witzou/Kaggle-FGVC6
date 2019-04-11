@@ -14,11 +14,11 @@ In this competition, FGVC workshop organizers with Wish and Malong Technologies 
 
 - Public Leaderboard
 
-![](image/Public LB.png)
+![](image/PublicLB.png)
 
 - Private Leaderboard
 
-![](image/Private LB.png)
+![](image/PrivateLB.png)
 
 
 [public raw data](https://www.kaggle.com/c/8219/publicleaderboarddata.zip)

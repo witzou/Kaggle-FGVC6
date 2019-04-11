@@ -10,7 +10,7 @@ In this competition, FGVC workshop organizers with Wish and Malong Technologies 
 - 经验分享：https://blog.csdn.net/mmc2015/article/details/51301865?locationNum=12&fps=1
 - 我的Kaggle初体验：https://www.wengbi.com/thread_95769_1.html
 
-## Leaderboard
+## Leaderboard (Evaluation: Mean F-score)
 
 - Public Leaderboard
 

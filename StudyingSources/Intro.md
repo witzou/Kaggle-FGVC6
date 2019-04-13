@@ -34,5 +34,24 @@
   - 原文目标函数的意义是：最小化分类损失，最大化奖励函数（是否值得采纳？）
   - Attention regions的形状过于固定，并不能适应物体的多尺度变化。可以采用类似于faster-RCNN的方式，先验框+ROI pooling，可以进一步提高准确率
   - 
+## [2018 ECCV] Multi-Attention Multi-Class Constraint for Fine-grained Image Recognition
+- Reprinted from: https://zhuanlan.zhihu.com/p/45345038
+- Brief Intro:
+ - Ming Sun & Baidu
+ - 大体思路：用多个 SE 结构获得部位的 Attention ，再用 N-pair Loss 对这些 Attention 进行约束。使得不同 SE 结构生成不同的部位 Attention ，完成弱监督细粒度图像识别。
+ 
+- 文中提出细粒度图像分类的三个准则：
+ - 检测的部位应该很好地散布在物体身上，并提取出多种不相关的features
+ - 提取出的每个part feature都应该能够区分出一些不同的类别
+ - part extractors（部位检测器）应该能轻便使用
+ 
+- 论文就提出了满足这些准则的弱监督信息分类方案：
+ - Attention用什么？ 用SENet的方案，设计one-squeeze multi-excitation module (OSME)来定位不同的部分。和现有的方法不同，现有的方法大多是裁剪出部位，再用额外的网络结构来前馈该特征。SEnet的输出可以看做soft-mask的作用。
+ - 如何让Attention学习出多个不同的部位？ 受到度量学习损失的启发（如TribleLoss），提出multi-attention multi-class constraint (MAMC) ，鼓励"same-calss和same-attention"的特征 和 "same-calss和different-attention"的特征 距离更接近。
+ - 现有的大多方法需要多个前馈过程或者多个交替训练步骤，而论文的方法是端到端的训练。
+ 
+## [ECCV2018] Learning to Navigate for FGVC
+
+https://zhuanlan.zhihu.com/p/48800265
 # RA-CNN
 Recurrent Attention Convolutional Neural Network”（RA-CNN，基于递归注意力模型的卷积神经网络）

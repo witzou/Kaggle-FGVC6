@@ -27,6 +27,9 @@
   
 ## [CVPR 2017] Fully Convolutional Attention Networks for Fine-Grained Recognition
 - 解读：https://zhuanlan.zhihu.com/p/44941451
+- Brief Intro
+ - ![](https://pic1.zhimg.com/80/v2-96d15d47bda67f52e8bb3be6716cd7e4_hd.jpg)
+ - 该框架有一个主体的特征提取架构（Feature Extraction），两个 Part Attention，用于提取感兴趣区域。最后的结果由三个部分的分类结果做一个 fusion 综合得出。
 - :question:所感
   - 原文目标函数的意义是：最小化分类损失，最大化奖励函数（是否值得采纳？）
   - Attention regions的形状过于固定，并不能适应物体的多尺度变化。可以采用类似于faster-RCNN的方式，先验框+ROI pooling，可以进一步提高准确率

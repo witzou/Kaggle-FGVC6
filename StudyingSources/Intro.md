@@ -1,7 +1,9 @@
 # 精细化分类
 
- __Briefly intro: from inter-class difference to intra-class difference__
- 
+ - __Briefly intro__: from inter-class difference to intra-class difference
+ - Reference
+ https://blog.csdn.net/qq_25439417/article/details/82764183
+ - 机器视觉Attention机制的研究: https://zhuanlan.zhihu.com/cvattention
 ## [CVPR 2015]  Bilinear CNN Models for Fine-grained Visual Recognition
 
 - 若干注意点
@@ -51,7 +53,13 @@
  - 现有的大多方法需要多个前馈过程或者多个交替训练步骤，而论文的方法是端到端的训练。
  
 ## [ECCV2018] Learning to Navigate for FGVC
-
 https://zhuanlan.zhihu.com/p/48800265
+
+## [ECCV2018] [MIT] Pairwise Confusion for Fine-Grained Visual Classification
+
+https://zhuanlan.zhihu.com/p/46499846
+
+## Weakly Supervised Local Attention Network for Fine-Grained Visual Classification
+https://zhuanlan.zhihu.com/p/57086099
 # RA-CNN
 Recurrent Attention Convolutional Neural Network”（RA-CNN，基于递归注意力模型的卷积神经网络）

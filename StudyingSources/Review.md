@@ -1,6 +1,4 @@
-# 「见微知著」——细粒度图像分析进展综述
-
-Reprinted from：https://zhuanlan.zhihu.com/p/24738319
+# 细粒度图像分析进展综述
 
 ## R Talk | 旷视南京研究院魏秀参：细粒度图像分析综述
 
@@ -9,4 +7,4 @@ Reprinted from：https://zhuanlan.zhihu.com/p/24738319
 
 ## 「见微知著」——细粒度图像分析进展综述
 
-https://zhuanlan.zhihu.com/p/24738319
+Reprinted from：https://zhuanlan.zhihu.com/p/24738319

@@ -55,9 +55,26 @@
 ## [ECCV2018] Learning to Navigate for FGVC
 https://zhuanlan.zhihu.com/p/48800265
 
-## [ECCV2018] [MIT] Pairwise Confusion for Fine-Grained Visual Classification
+## [ECCV 2018] [MIT] Pairwise Confusion for Fine-Grained Visual Classification
 
 https://zhuanlan.zhihu.com/p/46499846
+
+## [NIPS 2016] Mask-CNN: Localizing Parts and Selecting Descriptors for Fine-Grained Image Recognition
+
+- Brief Intro:
+
+M-CNN是一个四线模型（four-stream），四个输入分别为完整图像、检测到的头部、检测到的躯干和检测到的完整物体，每条线程通过卷积最后都得到了 deep descriptors ，进而得到`1024-d`向量，将四个向量拼接在一起，通过l2l2正则化、全连接层和softmax，最后得到类别
+
+- ![](https://img-blog.csdn.net/20180516183437914?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NDYyODQ5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+
+- Mask-CNN 准确率的提升之路
+ - 一开始，输入的图像是 224*224，M-CNN 的准确率有 83.1%；
+ - 将输入图像变为 448*448 后，准确率提升到了 85.3%；(图像质量提升对于训练有很好的帮助)
+ - 提高 4-stream M-CNN 的输入大小到 448*448 后，准确率反而有些下降；
+ - 如果从 relu5_2 层来提取 deep descriptors ，并且用Mask过滤一遍，提取出4096-d向量，再和pool5提取出来的拼在一起，变成一个8096-d向量，后续操作相同。该模型称作“4-stream M-CNN+”，它的准确率提升到了85.4%；
+ - 用SVD whitening方法将上述的8096-d向量压缩到4096-d，准确率提升到了85.5%；
+ - 如果CNN部分采用和part-stacked CNN一样的 Alex-Net模型，准确率只有78.0%，但还是比part-stacked CNN高。关键是替换后的参数只有9.74M了。
+
 
 ## Weakly Supervised Local Attention Network for Fine-Grained Visual Classification
 https://zhuanlan.zhihu.com/p/57086099
